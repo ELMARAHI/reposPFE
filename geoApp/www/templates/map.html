@@ -1,0 +1,48 @@
+<ion-view title="Vue Géographique" ng-controller="routeController">
+
+
+  <ion-nav-bar class="bar-stable">
+
+
+    <ion-nav-buttons side="left">
+
+
+
+      <button ng-click="$ionicGoBack();initiale()" class="button back-button buttons button-clear header-item">
+          <i class="icon ion-ios-arrow-back"></i>
+          <!-- <button ng-click="$ionicGoBack();initiale()" class="button back-button buttons button-clear header-item">
+          <i class="icon menu-icon ion-home"></i>
+           <span class="back-text" style="transform: translate3d(0px, 0px, 0px);">
+                  <span class="default-title hide">Back</span>
+                  <span class="previous-title"></span>
+            </span>
+      </button>-->
+      </button>
+
+
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+      <button ng-click="initiale();goPageAccueil()" class="button back-button buttons button-clear header-item">
+          <i class="icon menu-icon ion-home"></i>
+           
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button ng-click="locate();" class="button button-icon icon ion-pinpoint"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+
+
+  <ion-content data-tap-disabled="true">
+    <leaflet center="map.center" geojson="map.geojson" event-broadcast="map.events" legend="map.legend" bounds="map.bounds" layers="map.layers"
+      markers="map.markers" ng-if="map"></leaflet>
+    <div class="notifies" notifybar></div>
+
+
+  </ion-content>
+
+
+
+</ion-view>

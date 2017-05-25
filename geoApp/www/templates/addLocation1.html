@@ -1,0 +1,84 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">Signaler un problème</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="modal.hide()">Fermer</button>
+        </div>
+
+        <ion-nav></ion-nav>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <form name="locationForm">
+            <div class="list">
+                <label class="item item-input">
+            <span class="input-label"> Nom </span>
+            {{local.properties.name}}
+            </label>
+                <label class="item item-input">
+            <span class="input-label"> Groupe  </span>
+            {{local.properties.groupeb}}
+            </label>
+              
+                <label class="item item-input">
+            <span class="input-label">Ville</span>
+            {{local.properties.ville}}
+            </label>
+
+                <ion-item>
+                    <ion-label>ATM en Panne :</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.status" ng-true-value="'en panne'" ng-false-value="''"></ion-checkbox>
+
+
+                    <ion-label>ATM marche avec problèmes:</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.status" ng-true-value="'marche avec defaillance'" ng-false-value="''"></ion-checkbox>
+
+
+                </ion-item>
+                <ion-item ng-hide="param.status=='en panne'">
+                    <ion-label>La carte bancaire est avalée:</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.problemeCG" ng-true-value="'capture_carte'" ng-false-value="''"></ion-checkbox>
+
+
+                    <ion-label>La carte bancaire est refusée:</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.problemeCG" ng-true-value="'rejet_carte'" ng-false-value="''">
+                    </ion-checkbox>
+
+
+
+                </ion-item>
+                <ion-item ng-hide="param.status=='en panne'">
+                    <!--<ion-label>montant insufisant:</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.problemeFond" ng-true-value="'mantant_inssufisant'" ng-false-value="''"></ion-checkbox>
+                    -->
+
+                    <ion-label>Fond indisponible:</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.problemeFond" ng-true-value="'fond_indisponible'" ng-false-value="''"></ion-checkbox>
+
+
+                </ion-item>
+                <ion-item ng-hide="param.status=='en panne'">
+                    <ion-label>Ecran défectueux:</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.problemeMateriel" ng-true-value="'Ecrant_invisible'" ng-false-value="''"></ion-checkbox>
+
+                    <ion-label>Clavier ATM défaillant:</ion-label>
+                    <ion-checkbox color="dark" checked="true" ng-model="param.problemeMateriel" ng-true-value="'clavier_defaillant'" ng-false-value="''"></ion-checkbox>
+
+
+
+                </ion-item>
+
+
+                <div>
+
+                    <label class="item item-input">
+            <span class="input-label">Autres problemes</span>
+            <input type="text" ng-model="param.autreProbleme"    ng-minlength="1" ng-maxlength="100" required>
+            </label>
+
+                </div>
+                <div class="padding">
+                    <button class="button button-block button-assertive" ng-disabled="param.status=='' " ng-click="ajouterProbleme();modal.hide()">Envoyer</button>
+                </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

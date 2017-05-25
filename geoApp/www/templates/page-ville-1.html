@@ -1,0 +1,112 @@
+<ion-view title="Les ATMs par ville et groupe bancaire" id="villeGroupe">
+
+  <ion-content padding="true" class="has-header" ng-controller="MapController">
+
+
+
+    <center>
+
+    <form id="SignupForm" class="list" name="ville1">
+
+
+      <div style="margin-top:20%" >
+
+
+
+
+        <!-- <fieldset>
+
+          <div class="form-group agileinfo">
+            <label for="Name">Name</label>
+            <input id="Name" type="text" class="form-control" placeholder="Name">
+          </div>
+
+        </fieldset>
+        -->
+
+   
+
+
+          <div class="col-sm-10">
+            <div class="row">
+              <div  class="col-xs-10">
+                           <label for="CreditcardMonth" style="color:#000" class="col-sm-2 control-label">Groupe bancaire</label>
+
+                
+                <select id="soflow" ng-model="param.groupeBancaire" class="form-control w3-agileits col-sm-2" required>
+										  <option value="Selectionner">Selectionner</option>
+                      <option value="Banque Populaire">Banque Populaire</option>
+                      <option value="Attijariwafa Bank">Attijariwafa Bank</option>
+                      <option value="CDM">CDM</option>
+                      <option value="SGMB">SGMB</option>
+                      <option value="BMCE">BMCE</option>
+                      <option value="BMCI">BMCI</option>
+                      <option value="Poste Maroc">Poste Maroc</option>
+									</select>
+                 
+              </div>
+
+            </div>
+          </div>
+
+
+        <br/>
+
+
+   
+
+
+      
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-xs-10">
+                    <label for="CreditcardMonth" style="color:#000" class="col-sm-2 control-label">Ville&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select id="soflow"  ng-model="param.ville" class="form-control w3-agileits col-sm-2" required>
+										 <option value="Selectionner">Selectionner</option>
+
+                      <option value="AGADIR">AGADIR</option>
+                      <option value="BERRECHID">BERRECHID</option>
+                      <option  value="CASABLANCA">CASABLANCA</option>
+                      <option value="ELJADIDA">ELJADIDA</option>
+                      <option value="ESSAOUIRA">ESSAOUIRA</option>
+                      <option value="FEZ">FEZ</option>
+                      <option value="KENITRA">KENITRA</option>
+                      <option value="KHOURIBGA">KHOURIBGA</option>
+                      <option value="MOHAMMEDIA">MOHAMMEDIA</option>
+                      <option value="NADOR">NADOR</option>
+                      <option value="OUJDA">OUJDA</option>
+                      <option value="RABAT">RABAT</option>
+                      <option value="SAFI">SAFI</option>
+                      <option value="SALE">SALE</option>
+                      <option value="SETTAT">SETTAT</option>
+                      <option value="TANGER">TANGER</option>
+                      <option value="TAZA">TAZA</option>
+                      <option value="TEMARA">TEMARA</option>
+                      <option value="TETOUAN">TETOUAN</option>
+                      <option value="TATA">TATA</option>
+									</select>
+              </div>
+
+            </div>
+          </div>
+
+
+        
+        
+                <br/> <br/> <br/> 
+          <button id="be"  ng-click="goMapGroupeVille();LocaliserVille();" ng-disabled="(param.ville=='Selectionner' || param.groupeBancaire=='Selectionner')"
+                  class="button button-dark icon-left ion-android-checkbox-outline">Valider votre choix</button>
+             
+
+      </div>
+     
+    </form>
+
+    </center>
+
+     
+
+
+  </ion-content>
+
+</ion-view>

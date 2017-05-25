@@ -1,0 +1,90 @@
+<ion-view title="ATMs par les plus proches par groupe bancaire" id="bufferGroupe">
+  <ion-content padding="true" class="has-header" ng-controller="routeController">
+
+
+
+    <center>
+
+      <form id="SignupForm" class="list" name="ville1">
+
+
+        <div style="margin-top:20%">
+
+
+
+
+
+          
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-xs-10">
+             
+                 <label for="CreditcardMonth" style="color:#000" class="col-sm-2 control-label">Groupe bancaire</label>
+
+                <select id="soflow" ng-model="param.groupeBancaire" class="form-control w3-agileits col-sm-2" required>
+										  <option value="Selectionner">Selectionner</option>
+                      <option value="Banque Populaire">Banque Populaire</option>
+                      <option value="Attijariwafa Bank">Attijariwafa Bank</option>
+                      <option value="CDM">CDM</option>
+                      <option value="SGMB">SGMB</option>
+                      <option value="BMCE">BMCE</option>
+                      <option value="BMCI">BMCI</option>
+                      <option value="Poste Maroc">Poste Maroc</option>
+									</select>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <br/>
+
+
+
+
+
+          
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-xs-10">
+                <label for="CreditcardMonth" style="color:#000" class="col-sm-2 control-label">Rayon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select id="soflow" ng-model="param.rayon" class="form-control w3-agileits col-sm-2" required>
+										 <option value="Selectionner">Selectionner en mètre</option>
+          <option value="200">200</option>
+          <option value="400">400</option>
+          <option value="600">600</option>
+          <option value="800">800</option>
+          <option value="1000">1000</option>
+          <option value="1200">1200</option>
+          <option value="1400">1400</option>
+          <option value="1600">1600</option>
+          <option value="1800">1800</option>
+          <option value="2000">2000</option>
+          <option value="2000">6000</option>
+									</select>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+          <br/> <br/> <br/>
+          <button id="be" ng-click="goMapBuffer();LocaliserRayon();" ng-disabled="(param.rayon=='Selectionner' || param.groupeBancaire=='Selectionner')"
+            class="button button-dark icon-left ion-android-checkbox-outline">Valider votre choix</button>
+
+
+        </div>
+
+      </form>
+
+    </center>
+
+
+
+
+  </ion-content>
+
+</ion-view>

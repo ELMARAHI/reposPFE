@@ -1,0 +1,24 @@
+
+<ion-view title="Accueil" id="signaler">
+
+  <ion-content padding="true" class="has-header"  id="pageAccueil" ng-controller='routeController'>
+    <h1 class="logo">My Smart ATM</h1>
+    <div class="notifies" notifybar></div>
+   
+    <div style="padding-top: 200px" >
+      <div class="notifies" notifybar></div>
+     
+      
+
+        <button id="page1" style="opacity:0.5;font-weight:600;" ng-click="goVilleGroupe();initiale()" class="button button-dark  button-block icon-left ion-android-pin">&nbsp;&nbsp;Localiser GAB par ville&nbsp;&nbsp;</button>
+        <button id="page2" style="opacity:0.5;font-weight:600;" ng-click="goBufferGroupe();initiale()" class="button button-dark  button-block icon-left ion-android-time">Mon GAB le plus proche</button>
+        <button id="page3" style="opacity:0.5;font-weight:600;" ng-click="goMapSignaler();localiserProbleme();" class="button button-dark  button-block icon-left ion-alert-circled">&nbsp;&nbsp;Signaler un problème&nbsp;&nbsp;</button>
+
+
+      
+      
+    </div>
+
+
+  </ion-content>
+</ion-view>
